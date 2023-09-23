@@ -1,5 +1,6 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react';
 import UserRow from './UserRow';
+import ControlPanel from './ControlPanel';
 
 function App(props){
   //создаем стейт, значение которого будет пустой массив элементов
@@ -20,7 +21,12 @@ function App(props){
     fetchUserData()
   }, []);
 
-  return <UserRow data={users}/>;
+  return (
+  <div>
+    <ControlPanel />
+    <UserRow data={users} />
+  </div>
+  );
 }
 
 export default App;
