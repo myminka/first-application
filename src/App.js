@@ -1,9 +1,7 @@
 import {useEffect, useState} from 'react'
-import PassMessage from './PassMessage';
+import UserRow from './UserRow';
 
 function App(props){
-  const isPass = props.isPass;
-
   //создаем стейт, значение которого будет пустой массив элементов
   const [users, setUsers] = useState([]);
 
@@ -22,7 +20,7 @@ function App(props){
     fetchUserData()
   }, []);
 
-  return <PassMessage data={users}/>;
+  return <UserRow data={users}/>;
 }
 
 export default App;

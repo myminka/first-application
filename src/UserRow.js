@@ -1,7 +1,6 @@
 import React from 'react'
 
-function PassMessage(props){
-    console.log(props.data);
+function UserRow(props){
     return (
         <div>
             <h1 style = {
@@ -16,4 +15,4 @@ function PassMessage(props){
     )
 }
 
-export default PassMessage
+export default UserRow
